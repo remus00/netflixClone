@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import Banner from "@/components/Banner/Banner";
 
 export default function Home() {
     return (
@@ -15,6 +16,15 @@ export default function Home() {
             </Head>
 
             <h1>Netflix</h1>
+
+            <Banner
+                title="Clifford the red dog"
+                subtitle="He's a very cute dog"
+                imgURL="/static/clifford.webp"
+            />
+
+            {/* <NavBar />
+            <Card /> */}
         </>
     );
 }
