@@ -3,6 +3,7 @@ import styles from "../styles/Home.module.css";
 import Banner from "@/components/Banner/Banner";
 import NavBar from "@/components/NavBar/NavBar";
 import Card from "@/components/Card/Card";
+import SectionCards from "@/components/Card/SectionCards";
 
 export default function Home() {
     return (
@@ -23,6 +24,8 @@ export default function Home() {
                 subtitle="He's a very cute dog"
                 imgURL="/static/clifford.webp"
             />
+
+            <SectionCards title="Disney" />
 
             <Card imageUrl="/static/clifford.webp" size="large" />
             <Card imageUrl="/static/clifford.webp" size="medium" />
