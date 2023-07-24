@@ -2,15 +2,11 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Banner from "@/components/Banner/Banner";
 import NavBar from "@/components/NavBar/NavBar";
-import Card from "@/components/Card/Card";
 import SectionCards from "@/components/Card/SectionCards";
+import { getVideos } from "@/lib/videos";
 
 export default function Home() {
-    const disneyVideos = [
-        { imgURL: "/static/clifford.webp" },
-        { imgURL: "/static/clifford.webp" },
-        { imgURL: "/static/clifford.webp" },
-    ];
+    const disneyVideos = getVideos();
 
     return (
         <>
@@ -37,6 +33,7 @@ export default function Home() {
                     videos={disneyVideos}
                     size="large"
                 />
+
                 <SectionCards
                     title="Productivity"
                     videos={disneyVideos}
