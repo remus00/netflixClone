@@ -25,11 +25,9 @@ export default function Home() {
                 imgURL="/static/clifford.webp"
             />
 
-            <SectionCards title="Disney" />
-
-            <Card imageUrl="/static/clifford.webp" size="large" />
-            <Card imageUrl="/static/clifford.webp" size="medium" />
-            <Card imageUrl="/static/clifford.webp" size="small" />
+            <div className={styles.sectionWrapper}>
+                <SectionCards title="Disney" />
+            </div>
         </>
     );
 }
