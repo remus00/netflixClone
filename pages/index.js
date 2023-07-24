@@ -24,7 +24,7 @@ export default function Home() {
                 imgURL="/static/clifford.webp"
             />
 
-            <Card size="large" />
+            <Card imageUrl="/static/clifford.webp" size="large" />
             <Card imageUrl="/static/clifford.webp" size="medium" />
             <Card imageUrl="/static/clifford.webp" size="small" />
         </>
