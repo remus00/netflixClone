@@ -6,11 +6,13 @@ import SectionCards from "@/components/Card/SectionCards";
 import { getVideos } from "@/lib/videos";
 
 export async function getServerSideProps() {
-    const disneyVideos = getVideos();
+    const disneyVideos = await getVideos();
+    console.log(disneyVideos);
     return { props: { disneyVideos } };
 }
 
 export default function Home({ disneyVideos }) {
+    console.log("DA HOME", disneyVideos);
     return (
         <>
             <Head>

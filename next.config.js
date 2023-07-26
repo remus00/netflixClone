@@ -16,6 +16,9 @@ module.exports = {
             {
                 hostname: "i.ytimg.com",
             },
+            {
+                hostname: "yt3.ggpht.com",
+            },
         ],
     },
 };
