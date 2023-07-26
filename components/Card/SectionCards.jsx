@@ -1,7 +1,7 @@
 import Card from "./Card";
 import styles from "./SectionCards.module.css";
 
-const SectionCards = ({ title, videos, size }) => {
+const SectionCards = ({ title, videos = [], size }) => {
     console.log(videos);
     return (
         <section className={styles.container}>
