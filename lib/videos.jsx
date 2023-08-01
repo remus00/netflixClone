@@ -1,8 +1,9 @@
-export const getVideos = async (searchQuery) => {
+export const getCommonVideos = async (url) => {
     const YOUTUBE_API_KEY = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
     try {
+        const BASE_URL = "youtube.googleapis.com/youtube/v3";
         const response = await fetch(
-            `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${searchQuery}&key=${YOUTUBE_API_KEY}`,
+            `https://${BASE_URL}/${url}&key=${YOUTUBE_API_KEY}`,
         );
         const data = await response.json();
 
@@ -25,4 +26,12 @@ export const getVideos = async (searchQuery) => {
         return [];
     }
 };
-// disney%20trailer
+
+export const getVideos = async (searchQuery) => {
+    const URL = `search?part=snippet&maxResults=25&q=${searchQuery}`;
+    return getCommonVideos(URL);
+};
+
+/* 
+`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${searchQuery}&key=${YOUTUBE_API_KEY}`
+`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=${YOUTUBE_API_KEY}` */
