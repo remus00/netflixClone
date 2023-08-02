@@ -10,12 +10,12 @@ const Login = () => {
     };
 
     return (
-        <div>
+        <div className={styles.container}>
             <Head>
                 <title>Netflix SignIn</title>
             </Head>
 
-            <header>
+            <header className={styles.header}>
                 <div className={styles.headerWrapper}>
                     <Link href="/" className={styles.logoLink}>
                         <div className={styles.logoWrapper}>
@@ -28,25 +28,25 @@ const Login = () => {
                         </div>
                     </Link>
                 </div>
-
-                <main className={styles.main}>
-                    <div className={styles.mainWrapper}>
-                        <h1 className={styles.signinHeader}>Sing In</h1>
-                        <input
-                            type="text"
-                            placeholder="Email Address"
-                            className={styles.emailInput}
-                        />
-                        <p className={styles.userMsg}></p>
-                        <button
-                            onClick={handleLoginWithEmail}
-                            className={styles.loginBtn}
-                        >
-                            Sing In
-                        </button>
-                    </div>
-                </main>
             </header>
+
+            <main className={styles.main}>
+                <div className={styles.mainWrapper}>
+                    <h1 className={styles.signinHeader}>Sing In</h1>
+                    <input
+                        type="text"
+                        placeholder="Email Address"
+                        className={styles.emailInput}
+                    />
+                    <p className={styles.userMsg}></p>
+                    <button
+                        onClick={handleLoginWithEmail}
+                        className={styles.loginBtn}
+                    >
+                        Sing In
+                    </button>
+                </div>
+            </main>
         </div>
     );
 };
