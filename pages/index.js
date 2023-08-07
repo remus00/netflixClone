@@ -40,7 +40,7 @@ export default function Home({
             </Head>
 
             <div className={styles.main}>
-                <NavBar username="remus.burlacu00@gmail.com" />
+                <NavBar username="prova@gmail.com" />
                 <Banner
                     title="Clifford the red dog"
                     subtitle="He's a very cute dog"
