@@ -21,7 +21,7 @@ const Login = () => {
         e.preventDefault();
 
         if (email) {
-            if (email === "prova@gmail.com") {
+            if (email === "prova4615@gmail.com") {
                 console.log("Route to dashboard");
                 router.push("/");
             } else {
